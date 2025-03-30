@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { CarTaxiFront, Airplane, MapPin, Clock } from 'lucide-react';
+import { CarTaxiFront, Plane, MapPin, Clock } from 'lucide-react';
 
 const ServiceCard = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => {
   return (
@@ -39,7 +38,7 @@ const Services = () => {
           />
           
           <ServiceCard 
-            icon={<Airplane className="h-8 w-8 text-eco" />}
+            icon={<Plane className="h-8 w-8 text-eco" />}
             title="Reptéri Transzfer"
             description="Kényelmes és pontos transzfer a Liszt Ferenc reptérre és onnan vissza Esztergomba."
           />
