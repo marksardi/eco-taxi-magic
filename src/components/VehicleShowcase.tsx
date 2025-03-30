@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Leaf, Battery, Zap, Timer } from 'lucide-react';
+import { AspectRatio } from "./ui/aspect-ratio";
 
 const FeatureCard = ({ icon, title, value }: { icon: React.ReactNode, title: string, value: string }) => {
   return (
@@ -33,11 +33,15 @@ const VehicleShowcase = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-eco/10 rounded-full"></div>
-            <img 
-              src="/kia-e-niro-side.jpg" 
-              alt="Kia e-Niro elektromos taxi" 
-              className="relative z-10 rounded-xl shadow-xl"
-            />
+            <div className="relative z-10 rounded-xl shadow-xl overflow-hidden">
+              <AspectRatio ratio={4/3}>
+                <img 
+                  src="/lovable-uploads/b5636b0a-8f52-4541-9653-24151eea42e6.png" 
+                  alt="Kia e-Niro elektromos taxi" 
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+            </div>
             <div className="grid grid-cols-2 gap-4 mt-6">
               <FeatureCard 
                 icon={<Battery className="h-6 w-6 text-eco" />}
